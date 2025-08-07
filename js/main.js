@@ -6,4 +6,10 @@ class Student {
     this.surname = surname;
     this.score = score;
   }
+  setScore (newScore) {
+    this.score = newScore;
+  }
+  getPassStatus() {
+    return this.score >= 5 ? "Apto" : "No Apto";
+  }
 }
