@@ -23,7 +23,7 @@ function createStudentPromise() {
         document.getElementById('score').value
         ); 
       if (!student.forename || !student.surname || isNaN(student.score)) {
-        reject("Error: Datos del formulario incompletos o incorrectos.");
+        reject("Error: Datos no válidos");
       }
       resolve(`${student.forename} ${student.surname}: ${student.getPassStatus()}`);
     }, 2000);
