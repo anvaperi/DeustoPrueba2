@@ -30,10 +30,11 @@ function createStudentPromise() {
   });
 }
 
-createStudentPromise()
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
+async function showUserResult() {
+  try {
+    const result = await createStudentPromise();
+    console.log(result);
+  } catch (error) {
     console.error(error);
-  });
+  }
+}
